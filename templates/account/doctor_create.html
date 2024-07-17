@@ -1,0 +1,13 @@
+{% extends 'base.html' %} 
+{% load tailwind_filters %}
+{% block content %}
+<div class="max-w-lg mx-auto">
+  <form action="" method="post">
+    {% csrf_token %} 
+    {{ userForm|crispy }}
+    {{ doctorForm|crispy }}
+    <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded" type="submit">Create</button>
+  </form>
+</div>
+
+{% endblock content %}

@@ -1,0 +1,26 @@
+.dropbtn {
+    
+    border: none;
+    cursor: pointer;
+  }
+  
+  
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;  
+    overflow: auto;
+    z-index: 1;
+  }
+  
+  .dropdown-content a {
+    text-decoration: none;
+    display: block;
+
+  }
+    
+  .show {display: block;}

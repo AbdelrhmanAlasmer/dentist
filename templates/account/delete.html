@@ -1,0 +1,20 @@
+{% extends 'base.html' %} 
+{% load tailwind_filters %}
+{% block content %}
+<div class="max-w-lg mx-auto content-center">
+  <form action="" method="post">
+    <div class="max-w-lg mx-auto">
+    <p class=" flex py-5  ">
+        Are you sure you want to detele this patient
+    </p>
+
+    {% csrf_token %} {{ form|crispy }}
+    <div class="flex">
+    <button class="text-white bg-red-500 border-0 py-2 px-6 focus:outline-none hover:bg-red-600 rounded" type="submit">delete</button>
+    <a href="{% url 'account:details' patient.pk %}" class="text-white bg-green-500 border-0 ml-2 py-2 px-6 focus:outline-none hover:bg-green-600 rounded">return</a>
+    </div>
+    </div>
+  </form>
+</div>
+
+{% endblock content %}
